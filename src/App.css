@@ -35,6 +35,9 @@
   text-align: left;
   padding-left: 10px;
   color: #545E75;
+  margin: 0;
+  padding: 1em;
+  text-transform: capitalize;
 }
 
 .list-container ul {
@@ -57,11 +60,11 @@
   background-color: #eee;
 }
 .addItem-container {
-  background-color: #565656;
+  background-color: #4872a7;
   padding: 10px;
 }
 .itemInput {
-    width: 80%;
+    width: 100%;
     padding-left: 20px;
     height: 50px;
     border-radius: 5px;
@@ -69,7 +72,24 @@
     align-self: center;
     justify-self: center;
     margin: 5px 20px;
-    font-size: 1em;
+    outline: none;
+    font-size: 0.9em;
+}
+button {
+  font-size: 1em;
+  color: #fff;
+  background-color: #6ed27a;
+  border: none;
+  margin: 0;
+  padding: 0px 30px;
+  height: 50px;
+  border-radius: 5px;
+  justify-self: center;
+  align-self: center;
+}
+.formItems {
+  display: flex;
+  flex-direction: row;
 }
 
 @keyframes App-logo-spin {

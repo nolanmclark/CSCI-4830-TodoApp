@@ -10,8 +10,6 @@ class App extends Component {
       <div className="App">
         <Header />
         <AddItem />
-        <List title="Things to do" className="App-list" />
-        <List title="Completed" className="App-list" />
       </div>
     );
   }
