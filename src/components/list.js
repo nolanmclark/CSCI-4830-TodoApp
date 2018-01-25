@@ -3,9 +3,13 @@ import '../App.css';
 
 class List extends React.Component {
 
+  createListFromDb() {
+    //TODO: Pull from database to get existing objects,
+    // push to list as object. Get completed and things to do.
+  }
+
   render() {
     const listContent = ['Idea', 'Another', 'Again'];
-
     const listItems = listContent.map((item) =>
       <li>{item}</li>
     );
