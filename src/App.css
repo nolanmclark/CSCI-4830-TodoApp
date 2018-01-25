@@ -3,18 +3,73 @@
 }
 
 .App-header {
-  background-color: #222;
-  padding: 20px;
+  background-color: #ff905b;
+  padding: 10px;
   color: white;
   align-self: center;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  margin: 5px 0;
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 600
 }
 
-.App-intro {
+.App-title-time {
+  margin: 5px 0;
+  align-self: center;
+  justify-self: center;
+}
+
+.App-list {
   font-size: large;
+}
+
+.list-container h1 {
+  font-size: 1em;
+  text-align: left;
+  padding-left: 10px;
+  color: #545E75;
+}
+
+.list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-container ul li {
+  padding: 20px;
+  background-color: #eee;
+}
+
+.list-container ul li:nth-child(even) {
+    background-color: #fff;
+}
+
+.list-container ul li {
+  padding: 20px;
+  background-color: #eee;
+}
+.addItem-container {
+  background-color: #565656;
+  padding: 10px;
+}
+.itemInput {
+    width: 80%;
+    padding-left: 20px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    align-self: center;
+    justify-self: center;
+    margin: 5px 20px;
+    font-size: 1em;
 }
 
 @keyframes App-logo-spin {

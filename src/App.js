@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+import Header from './components/header.js';
+import List from './components/list.js';
+import AddItem from './components/addItem.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Hello World</h1>
-        </header>
-        <p className="App-intro">
-          The to-do app will be here!
-        </p>
+        <Header />
+        <AddItem />
+        <List title="To-do" className="App-list" />
+        <br/>
+        <List title="Completed" className="App-list" />
       </div>
     );
   }
