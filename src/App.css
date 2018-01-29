@@ -46,11 +46,6 @@
   margin: 0;
 }
 
-.list-container ul li {
-  padding: 20px;
-  background-color: #eee;
-}
-
 .list-container ul li:nth-child(even) {
     background-color: #fff;
 }
@@ -75,24 +70,39 @@
     outline: none;
     font-size: 0.9em;
 }
-button {
+.delete-btn {
+  color: red;
+  font-size: 0.8em;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  font-weight: 700;
+}
+.delete-btn:hover {
+  color: #d43838;
+  transition: all ease-in-out .2s;
+}
+.delete-container {
+  float: right;
+}
+.add-button {
   font-size: 1em;
   color: #fff;
   background-color: #6ed27a;
   border: none;
   margin: 0;
   padding: 0px 30px;
-  height: 50px;
+  height: 52px;
   border-radius: 5px;
   justify-self: center;
   align-self: center;
+  outline: none;
+  transition: all ease-in-out .2s;
+}
+.add-button:hover {
+  background-color: #5cbd60;
 }
 .formItems {
   display: flex;
   flex-direction: row;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

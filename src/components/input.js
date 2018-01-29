@@ -17,6 +17,7 @@ class Input extends React.Component{
   onSubmit(e) {
     e.preventDefault();
     if(this.state.value === '') return;
+
     this.props.onSubmit(this.state.value);
     this.setState({value: ''})
   }
@@ -27,7 +28,7 @@ class Input extends React.Component{
         <input className="itemInput" type="text"
         placeholder={this.props.text} value={this.state.value}
         onChange={this.handleChange} />
-        <button type="submit">Add</button>
+        <button class="add-button" type="submit">Add</button>
       </form>
     );
   }

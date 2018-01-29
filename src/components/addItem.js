@@ -28,9 +28,7 @@ class AddItem extends React.Component{
         <div className="addItem-container">
           <Input onSubmit={this.createItem} text="What do you have to do today?" />
         </div>
-        <div>
-          <List items={this.state.items} title="Things to do" className="App-list" />
-        </div>
+        <List items={this.state.items} title="Things to do" className="App-list" />
       </div>
     );
   }
