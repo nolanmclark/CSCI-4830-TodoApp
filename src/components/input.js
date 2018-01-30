@@ -4,7 +4,6 @@ import '../App.css';
 class Input extends React.Component{
   constructor(props) {
     super(props);
-
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {value: ''};

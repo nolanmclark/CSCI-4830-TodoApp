@@ -7,7 +7,8 @@ class List extends React.Component {
   constructor(props){
   	super(props);
   	this.state = {
-      items: this.props.items
+      items: this.props.items,
+      completed: []
     };
     this.deleteFromList = this.deleteFromList.bind(this);
   }
@@ -25,17 +26,31 @@ class List extends React.Component {
     //TODO: Delete item from current list and from database.
   }
 
+  addToCompletedList(item) {
+    let itemsCollection = this.props.items;
+    let idx = itemsCollection.indexOf(item);
+    let newList = itemsCollection.splice(idx, 1);
+    let completedCollection = this.state.completed.slice();
+    completedCollection.push(item);
+    this.props.onSentToCompleted(item);
+    this.setState({items: newList, completed: completedCollection});
+  }
+
+
   render() {
     const listContent = this.props.items;
+
     const listItems = listContent.map((item) =>
-      <li>{item}
-            <div class="delete-container">
-              <button class="delete-btn" onClick={() => this.deleteFromList(item)}>Remove</button>
-            </div>
+      <li>
+          <div class="complete-container">
+            <input type="checkbox" disabled={this.props.disabled} checked={this.props.disabled} class="complete-btn" onClick={() => this.addToCompletedList(item)}></input>
+          </div>
+          {item}
+          <div class="delete-container">
+            <button class="delete-btn" onClick={() => this.deleteFromList(item)}>Remove</button>
+          </div>
       </li>
     );
-
-    console.log(this.state.items);
 
     return (
       <div className="list-container">

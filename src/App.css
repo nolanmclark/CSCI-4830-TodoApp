@@ -71,8 +71,8 @@
     font-size: 0.9em;
 }
 .delete-btn {
-  color: red;
-  font-size: 0.8em;
+  color: #9F9F9f;
+  font-size: 0.7em;
   border: none;
   background-image: none;
   background-color: transparent;
@@ -84,6 +84,10 @@
 }
 .delete-container {
   float: right;
+}
+
+.complete-container {
+  float: left;
 }
 .add-button {
   font-size: 1em;
