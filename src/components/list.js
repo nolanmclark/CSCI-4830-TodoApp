@@ -13,11 +13,6 @@ class List extends React.Component {
     this.deleteFromList = this.deleteFromList.bind(this);
   }
 
-  createListFromDb() {
-    //TODO: Pull from database to get existing objects,
-    // push to list as object. Get completed and things to do.
-  }
-
   deleteFromList(item) {
     let itemsCollection = this.props.items;
     let idx = itemsCollection.indexOf(item);
@@ -39,13 +34,12 @@ class List extends React.Component {
 
   render() {
     const listContent = this.props.items;
-
     const listItems = listContent.map((item) =>
       <li>
           <div class="complete-container">
             <input type="checkbox" disabled={this.props.disabled} checked={this.props.disabled} class="complete-btn" onClick={() => this.addToCompletedList(item)}></input>
           </div>
-          {item}
+          {item.desc}
           <div class="delete-container">
             <button class="delete-btn" onClick={() => this.deleteFromList(item)}>Remove</button>
           </div>

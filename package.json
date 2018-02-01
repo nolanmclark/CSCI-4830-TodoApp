@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "feather-icons": "^4.5.0",
+    "firebase": "^4.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "reactfire": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
