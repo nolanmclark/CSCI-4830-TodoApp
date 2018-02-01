@@ -1,5 +1,7 @@
 import React from 'react';
 import '../App.css';
+import firebase from 'firebase';
+
 const feather = require('feather-icons');
 
 class List extends React.Component {
@@ -14,11 +16,21 @@ class List extends React.Component {
   }
 
   deleteFromList(item) {
+    let db = firebase.firestore();
     let itemsCollection = this.props.items;
     let idx = itemsCollection.indexOf(item);
     let newList = itemsCollection.splice(idx, 1);
     this.setState({items: newList});
     //TODO: Delete item from current list and from database.
+    let progressRef = db.collection("inProgress");
+    let completedRef = db.collection("completed");
+    completedRef.doc(item.id).get().then((docSnapshot) => {
+      if (docSnapshot.exists) {
+        completedRef.doc(item.id).delete();
+      } else {
+        progressRef.doc(item.id).delete();
+      }
+    });
   }
 
   addToCompletedList(item) {
