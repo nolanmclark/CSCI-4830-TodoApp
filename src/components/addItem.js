@@ -3,7 +3,7 @@ import '../App.css';
 import Input from './input.js';
 import List from './list.js';
 const firebase = require("firebase");
-const firestore = require("firebase/firestore");
+require("firebase/firestore");
 
 class AddItem extends React.Component{
   constructor(props) {

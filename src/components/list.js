@@ -2,8 +2,6 @@ import React from 'react';
 import '../App.css';
 import firebase from 'firebase';
 
-const feather = require('feather-icons');
-
 class List extends React.Component {
 
   constructor(props){
@@ -21,7 +19,7 @@ class List extends React.Component {
     let idx = itemsCollection.indexOf(item);
     let newList = itemsCollection.splice(idx, 1);
     this.setState({items: newList});
-    //TODO: Delete item from current list and from database.
+
     let progressRef = db.collection("inProgress");
     let completedRef = db.collection("completed");
     completedRef.doc(item.id).get().then((docSnapshot) => {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './components/header.js';
-import List from './components/list.js';
 import AddItem from './components/addItem.js';
 import './App.css';
 
