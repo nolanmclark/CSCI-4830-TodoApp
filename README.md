@@ -1,4 +1,4 @@
 # To-Do App - Tech Exercise
-Built with ReactJS, Firebase Cloud Firestore, and deployed on AWS.
+Built with ReactJS and Firebase Cloud Firestore
 
 `npm start`
